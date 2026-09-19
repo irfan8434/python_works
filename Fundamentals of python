@@ -1,0 +1,75 @@
+
+# Let's learn all about VARIABLES
+
+student_name = "Arun"
+course_name = "Python Fundamentals"
+institute_name = "Inceptez Technologies"
+
+print(f"Name: {student_name} is learning the course {course_name} at the institute {institute_name}")
+
+#Python Dynamic Inference, Dynamic Typing & Strong Typing with GST Calculation
+
+fee = 45000
+
+# Dynamic inference
+print(type(fee))
+
+# GST as numeric value
+gst = 0.18
+
+gst_amount = fee * gst
+total_fee = fee + gst_amount
+
+print("GST Amount:", gst_amount)
+print("Total Fee:", total_fee)
+
+# Dynamic typing
+fee = "45000"
+print(type(fee))
+
+# Strong typing example
+gst_text = "Eighteen percent"
+
+# This will give an error because integer and string
+# cannot be added directly
+# print(45000 + gst_text)
+
+def check_room_availability(room_available, is_vip, member_years):
+    if not room_available:
+        return "No rooms available"
+
+    if is_vip:
+        return "Offer complimentary upgrade"
+
+    elif member_years >= 5:
+        return "Offer discount"
+
+    else:
+        return "Standard price"
+
+
+result = check_room_availability(
+    room_available=True,
+    is_vip=False,
+    member_years=6
+)
+
+print(result)
+
+
+age = int(input("Enter your age: "))
+income = float(input("Enter your monthly income: "))
+
+if age < 18:
+    print("Not eligible for a bank account.")
+
+elif income < 15000:
+    print("Eligible for basic savings account.")
+
+elif income <= 50000:
+    print("Eligible for savings + salary account.")
+
+else:
+    print("Eligible for premium account.")
+
+
